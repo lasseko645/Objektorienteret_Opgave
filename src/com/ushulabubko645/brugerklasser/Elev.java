@@ -1,4 +1,4 @@
-package com.ushulabubko645;
+package com.ushulabubko645.brugerklasser;
 
 public class Elev extends SystemPersonUndefined {
 }

@@ -1,4 +1,4 @@
-package com.ushulabubko645;
+package com.ushulabubko645.kursusklasser;
 
 public enum Tidsplan {
     mandag_08_30_til_12_40, mandag_13_10_til_16_00,
