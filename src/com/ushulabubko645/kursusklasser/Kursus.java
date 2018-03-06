@@ -7,19 +7,25 @@ public class Kursus {
     private Afslutning afslutning;
     private Afslutningstype afslutningstype;
     private String underviser;
-    private String lokale;
+    private Lokale lokale;
     private Tidsplan tidsplan;
     private int maxAntalStuderende;
     private int nuværendeAntalStuderende;
 
     public Kursus(String kursusNavn) {
         this.kursusNavn = kursusNavn;
+        // jeg gør her brug af min metode til at automatist gemme den data som bliver skrevet ind, i mit array
+        KursusListe.add(this);
     }
 
     public String getKursusNavn() {
 
+        String error = "der er felj";
+
         if (kursusNavn != null && kursustype != null) {
             return kursusNavn;
+        } else {
+            return error;
         }
     }
 
@@ -37,6 +43,14 @@ public class Kursus {
 
     public Afslutning getAfslutning() {
         return afslutning;
+    }
+
+    public Lokale getLokale() {
+        return lokale;
+    }
+
+    public void setLokale(Lokale lokale) {
+        this.lokale = lokale;
     }
 
     public void setAfslutning(Afslutning afslutning) {
@@ -57,14 +71,6 @@ public class Kursus {
 
     public void setUnderviser(String underviser) {
         this.underviser = underviser;
-    }
-
-    public String getLokale() {
-        return lokale;
-    }
-
-    public void setLokale(String lokale) {
-        this.lokale = lokale;
     }
 
     public Tidsplan getTidsplan() {
